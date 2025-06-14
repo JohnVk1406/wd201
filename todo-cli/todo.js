@@ -25,8 +25,10 @@ const todoList = () => {
   const toDisplayableList = (list) => {
     return list.map((item) => {
       if (item.completed === true) {
+        if ((new Date(item.dueDate)).toDateString() === today.toDateString()) return `[x] ${item.title}`;
         return `[x] ${item.title} ${item.dueDate}`
       } else {
+        if ((new Date(item.dueDate)).toDateString() === today.toDateString()) return `[ ] ${item.title}`;
         return `[ ] ${item.title} ${item.dueDate}`
       }
     }).join("\n")
