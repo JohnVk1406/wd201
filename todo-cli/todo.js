@@ -24,6 +24,7 @@ const todoList = () => {
 
   const toDisplayableList = (list) => {
     return list.map((item) => {
+      let today = new Date();
       if (item.completed === true) {
         if ((new Date(item.dueDate)).toDateString() === today.toDateString()) return `[x] ${item.title}`;
         return `[x] ${item.title} ${item.dueDate}`
