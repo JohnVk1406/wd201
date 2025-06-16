@@ -46,6 +46,8 @@ const todoList = () => {
   };
 };
 
+module.exports = todoList;
+/*
 // ####################################### #
 // DO NOT CHANGE ANYTHING BELOW THIS LINE. #
 // ####################################### #
@@ -89,4 +91,4 @@ console.log("Due Later")
 let itemsDueLater = todos.dueLater()
 let formattedItemsDueLater = todos.toDisplayableList(itemsDueLater)
 console.log(formattedItemsDueLater)
-console.log("\n\n")
+console.log("\n\n") */
