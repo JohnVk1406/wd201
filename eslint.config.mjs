@@ -8,7 +8,7 @@ export default defineConfig([
   { files: ["**/*.js"], languageOptions: { sourceType: "commonjs" } },
   { files: ["**/*.{js,mjs,cjs}"], languageOptions: { globals: globals.browser } },
 ]);
-{
+/*{
   "env": {
     "commonjs": true,
     "es2021": true,
@@ -21,4 +21,4 @@ export default defineConfig([
     "ecmaVersion": "latest"
   },
   "rules": {}
-};
+};*/
