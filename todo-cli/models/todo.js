@@ -19,7 +19,8 @@ module.exports = (sequelize, DataTypes) => {
       console.log("Overdue");
       // FILL IN HERE
       const overdues = await this.overdue();
-      console.log(overdues.map((item) => item.displayableString()).join("\n"));
+      //print the list with no trailling spaces
+      console.log(overdues.map((item) => item.displayableString().trim()).join("\n"));
       console.log("\n");
 
       console.log("Due Today");
