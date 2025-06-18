@@ -20,7 +20,7 @@ module.exports = (sequelize, DataTypes) => {
       // FILL IN HERE
       const overdues = await this.overdue();
       //print the list with no trailling spaces
-      console.log(overdues.map((item) => item.displayableString().trim()).join("\n"));
+      console.log(overdues.map((item) => item.displayableString()).join("\n"));
       console.log("\n");
 
       console.log("Due Today");
@@ -78,7 +78,7 @@ module.exports = (sequelize, DataTypes) => {
     displayableString() {
       let checkbox = this.completed ? "[x]" : "[ ]";
       let date = (new Date(this.dueDate).toDateString() === (new Date().toDateString())) ? "" : this.dueDate;
-      return `${this.id}. ${checkbox} ${this.title} ${date}`;
+      return `${this.id}. ${checkbox} ${this.title} ${date}`.trim();
     }
   }
   Todo.init({
