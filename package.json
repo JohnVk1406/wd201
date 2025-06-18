@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+   "test": "jest --detectOpenHandles",
     "prepare": "husky"
   },
   "repository": {
@@ -26,12 +26,13 @@
   },
   "dependencies": {
     "husky": "^9.1.7",
-    "minimist": "^1.2.8"
+    "minimist": "^1.2.8",
+    "pg-hstore": "^2.3.4"
   },
   "lint-staged": {
-  "*.js": [
-    "eslint",
-    "prettier --write ."
+    "*.js": [
+      "eslint",
+      "prettier --write ."
     ]
   }
 }
